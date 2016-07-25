@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorSplash">#ededed</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorAccent">#ff6026</color>
+    <color name="selected_overlay">#bbdefb</color>
+    <color name="colorText">#2196F3</color>
+    <color name="colorBackgroundBottomSheet">#ffffff</color>
+    <color name="colorLine">#c2bfbf</color>
+
+    <!--<color name="colorBackgroundPage">#ffffff</color>-->
+    <color name="colorBackgroundPage">#2196F3</color>
+    <color name="colorIconAction">#2196F3</color>
+    <color name="colorShapeRunning">#0aba3f</color>
+    <color name="colorShapeShutdown">#ff1511</color>
+    <color name="colorShapeAvatar">#FF095420</color>
+
+    <color name="colorAttached">#FF9800</color>
+    <color name="colorAvailable">#0aba3f</color>
+    <color name="colorShapeError">#ff1511</color>
+</resources>
