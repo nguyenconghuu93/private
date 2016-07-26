@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "376213079117",
+    "firebase_url": "https://vimonitor-a3625.firebaseio.com",
+    "project_id": "vimonitor-a3625",
+    "storage_bucket": "vimonitor-a3625.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376213079117:android:a6d7e6d025477658",
+        "android_client_info": {
+          "package_name": "com.vicloud.vn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376213079117-3prvu502d9b0hd899hloijv028dlinee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi5I2RuObRTvEWVJ3bSyH7iQGTK0EuX_Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

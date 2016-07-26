@@ -16,8 +16,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.vicloud.vn.fragments.ServerFragment;
 import com.vicloud.vn.fragments.SettingFragment;
+
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,8 +48,14 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         loadFragmentServer();
+//        loadNotify();
     }
 
+    private void loadNotify(){
+        FirebaseMessaging.getInstance().subscribeToTopic("test");
+        FirebaseInstanceId.getInstance().getToken();
+
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
