@@ -18,7 +18,7 @@ public class FirebaseInstanceIDService extends FirebaseInstanceIdService  {
         registerToken(token);
     }
     private void registerToken(String token) {
-//        CloudAPIs.registerFCM(token);
+        CloudAPIs.registerFCM(token);
     }
 }
 

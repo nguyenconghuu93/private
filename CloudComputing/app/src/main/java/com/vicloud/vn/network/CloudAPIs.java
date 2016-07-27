@@ -64,9 +64,6 @@ public class CloudAPIs {
             OutputStreamWriter out = new   OutputStreamWriter(httpConn.getOutputStream());
             out.write(dataJson.toString());
             out.close();
-            String data = null;
-            StringBuilder sb = new StringBuilder();
-            httpResponseCode = httpConn.getResponseCode();
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
