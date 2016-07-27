@@ -7,6 +7,7 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
@@ -61,7 +62,8 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ServerView
         final Server server = mDataSet.get(position);
         holder.serverName.setText(server.getServerName());
         holder.ip.setText(server.getIp());
-        holder.icon_entry.setText(String.valueOf(server.getServerName().toUpperCase().charAt(0)));
+        String text = server.getServerName().toUpperCase();
+        holder.icon_entry.setText(String.valueOf(text.substring(0,2)));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +76,12 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ServerView
                 showBottomSheetDialog();
             }
         });
+        if (server.getVmState().equals("running"))
+                holder.cardView.setBackgroundColor(Color.parseColor("#E3F2FD"));
+        else if (server.getVmState().equals("suspend"))
+            holder.cardView.setBackgroundColor(Color.parseColor("#F4FF81"));
+        else
+            holder.cardView.setBackgroundColor(Color.parseColor("#FFCDD2"));
     }
 
     @Override
@@ -84,7 +92,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ServerView
         CardView cardView;
         TextView serverName, ip, icon_entry;
         ImageButton imageButton;
-
+        View overlay;
         ServerViewHolder(View itemView) {
             super(itemView);
             cardView = (CardView) itemView.findViewById(R.id.server_layout);
@@ -92,6 +100,7 @@ public class ServerAdapter extends RecyclerView.Adapter<ServerAdapter.ServerView
             ip = (TextView) itemView.findViewById(R.id.ip);
             icon_entry = (TextView) itemView.findViewById(R.id.icon_entry);
             imageButton = (ImageButton) itemView.findViewById(R.id.btn_more);
+            overlay = itemView.findViewById(R.id.selected_overlay);
         }
     }
 

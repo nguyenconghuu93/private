@@ -85,10 +85,15 @@ public class ServerFragment extends Fragment {
         loadData();
         return view;
     }
+
     public void insertData() {
         for (int i =0; i<= 20; i++){
-            cacheHelper.addServer(new Server(i +"instance "+ i, String.valueOf(i),"running","192.168.1.1","ubuntu","as:asda:asda",
+            if (i %2 == 0)
+                cacheHelper.addServer(new Server(i +"instance "+ i, String.valueOf(i),"running","192.168.1.1","ubuntu","as:asda:asda",
                     "2 core", "running"));
+            else
+                cacheHelper.addServer(new Server(i +"instance "+ i, String.valueOf(i),"running","192.168.1.1","ubuntu","as:asda:asda",
+                        "2 core", "shutdown"));
         }
     }
     private void loadData(){
